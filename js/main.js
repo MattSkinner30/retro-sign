@@ -1,11 +1,11 @@
 var $svg = $('svg');
+var $lines = $('.lines');
+var $engage = $('.engage');
+var $btn = $('.btn');
 
-$('.btn').on('click', function () {
-  if ($svg.hasClass('is-engaged')) {
-    $svg.addClass('is-disengaged');
-    $svg.removeClass('is-engaged');
-  } else {
-    $svg.addClass('is-engaged');
-    $svg.removeClass('is-disengaged');
-  }
+$('svg').on('click', function (e) {
+  $('.lines').toggleClass('linify');
+  $('.engage').toggleClass('engaged');
+  $btn.toggleClass('button');
+  $('svg').toggleClass('is-pressed');
 });
